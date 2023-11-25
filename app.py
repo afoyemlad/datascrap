@@ -1,3 +1,4 @@
+from flask import Flask
 import pandas as pd
 import requests
 import schedule
@@ -5,6 +6,9 @@ import datetime
 import time
 
 from pandas import DataFrame
+
+app = Flask(__name__)
+@app.route('/')
 
 def fetch_data(day,time):
   apiKey = '6e6bfb2b24350ffd7ffc48c8b2fc3d6f6134a8d3'
